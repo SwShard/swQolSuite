@@ -124,7 +124,7 @@ impl Tweak for MultithreadedLoadingTweak {
                 _, _,                                             // PUSH       _
                 _, _,                                             // PUSH       _
                 _, 0x8d, 0x6c, _, 0xe1,                           // LEA        RBP,[RSP + -0x1f]
-                0x48, 0x81, 0xec, (0xa0 | 0xd0), 0x00, 0x00, 0x00 // SUB        RSP,0xa0 (0xd0 on <1.12.7)
+                0x48, 0x81, 0xec, 0xa0, 0x00, 0x00, 0x00          // SUB        RSP,0xa0 on 1.12.7
             ]).context("Error finding load_save fn addr")?;
 
             let det = GenericDetour::new(
