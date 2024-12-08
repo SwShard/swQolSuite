@@ -30,9 +30,9 @@ impl Tweak for FastLoadingAnimationsTweak {
         // ```
         #[rustfmt::skip]
         let memory_pattern = generate_aob_pattern![
-            0x49, 0x8B, 0xD4,                        // MOV    RDX,R12 (unimportant)
+            0x49, 0x8B, 0xD7,                        // MOV    RDX,R15 (unimportant) on 1.13.1
             0xff, 0x90, 0xf0, 0x00, 0x00, 0x00,      // CALL   qword ptr [RAX + 0xf0] (unimportant)
-            0x41, 0xff, 0x87, 0x90, 0xdb, 0x0b, 0x00 // INC    dword ptr [R15 + 0xbdb90] on 1.12.7
+            0x41, 0xff, 0x85, 0x90, 0xdb, 0x0b, 0x00 // INC    dword ptr [R13 + 0xbdb90] on 1.13.1
         ];
 
         let menu_fade_injection = builder
@@ -87,9 +87,9 @@ impl Tweak for FastLoadingAnimationsTweak {
 extern "stdcall" fn custom_fade() {
     unsafe {
         asm!(
-            "mov rdx,r12",                      // original code
+            "mov rdx,r15",                      // original code
             "call [rax + 0xf0]",                // original code
-            "add dword ptr [r15 + 0xbdb90],15", // inc by 15 instead of 1
+            "add dword ptr [r13 + 0xbdb90],15", // inc by 15 instead of 1
             options(nostack),
         );
     }

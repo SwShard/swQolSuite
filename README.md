@@ -1,4 +1,14 @@
-# Development is on indefinite hiatus due to the new EULA
+# Attention, this is an [unofficial] repository of the program!
+
+A copy of the repository was created in case the original repository was deleted, as well as for the probable support of the program in a working state
+
+The original repository (archived) is located here:
+
+https://github.com/PieKing1215/swQolSuite
+
+# The original author's note on the termination of support for an indefinite period:
+
+### Development is on indefinite hiatus due to the new EULA
 
 More info: [The Future of swQolSuite](https://github.com/PieKing1215/swQolSuite/issues/4)
 
@@ -15,14 +25,14 @@ Due to the nature of these methods, I won't make any guarantees about stability.
 Injecting or ejecting the mod are the most likely to crash, but it might also be possible when changing settings while in use (eg. changing editor settings while in editor)<br/>
 
 **swQolSuite will likely be flagged by your Windows/antiviruses** (`Trojan:Win32/Wacatac.B!ml`) as a side effect of how it works. The way swQolSuite injects into the game is similar to how some viruses hook other processes, and some antiviruses will detect this.
-Obviously I will say this repo (PieKing1215/swQolSuite) and official builds do not actually contain malware to my knowledge, but if you want to be sure, look over the code and [build from source](https://github.com/PieKing1215/swQolSuite/wiki/Building).
+Obviously I will say original repo (PieKing1215/swQolSuite) or unofficial repo (SwShard/swQolSuite) and official/unofficial builds do not actually contain malware to my knowledge, but if you want to be sure, look over the code and [build from source](https://github.com/SwShard/swQolSuite/wiki/Building) [unofficial (copied) wiki].
 
 swQolSuite is not a cheating/griefing tool, please do not request features that give you an advantage over other players in multiplayer.
 
 ## Download
 For releases, see [Releases](../../releases).<br/>
-For dev builds: sign in to GitHub, go [here](https://github.com/PieKing1215/swQolSuite/actions/workflows/autobuild.yml?query=branch%3Amain+is%3Asuccess), click the latest one, scroll down to "Artifacts" and download it.<br/>
-Or download the latest at https://nightly.link/PieKing1215/swQolSuite/workflows/autobuild/main<br/>
+For dev builds: sign in to GitHub, go [here](https://github.com/SwShard/swQolSuite/actions/workflows/autobuild.yml?query=branch%3Amain+is%3Asuccess), click the latest one, scroll down to "Artifacts" and download it.<br/>
+Or download the latest at https://nightly.link/SwShard/swQolSuite/workflows/autobuild/main<br/>
 Unzip and run swqols-inject.exe to run.
 
 ## Basic Usage
@@ -41,7 +51,7 @@ The patches are set up so they should usually continue to work after game update
 If after an update any patches fail, you should just get an error in the error window and the failing tweak will be disabled until it is updated to work again.
 
 # Features
-See [Tweaks & Settings](https://github.com/PieKing1215/swQolSuite/wiki/Tweaks-&-Settings)
+See [Tweaks & Settings](https://github.com/SwShard/swQolSuite/wiki/Tweaks-&-Settings) [unofficial (copied) wiki]
 
 ## Licenses
 

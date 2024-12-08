@@ -159,7 +159,7 @@ impl Tweak for TransformEditTweak {
                 0xe8, _, _, _, _,                     // CALL       _
                 0xf6, 0xc3, 0x01,                     // TEST       BL,0x1
                 0x74, _,                              // JZ         _
-                0xba, 0xf0, 0x9c, 0x00, 0x00          // MOV        param_2,0x9cf0 on 1.12.7
+                0xba, 0xf0, 0x9c, 0x00, 0x00          // MOV        param_2,0x9cf0 on =>1.12.7
             ];
             let editor_destructor_fn_addr = builder
                 .region
@@ -222,7 +222,7 @@ impl Tweak for TransformEditTweak {
 
         #[rustfmt::skip]
         let memory_pattern = generate_aob_pattern![
-            0x48, 0x8b, 0x52, 0x58,      // MOV        RDX,qword ptr [RDX + 0x58]
+            0x48, 0x8b, 0x51, 0x58,      // MOV        RDX,qword ptr [RDX + 0x58] on 1.13.1
             0x48, 0x8b, 0x12,            // MOV        RDX,qword ptr [RDX]
             0x48, 0x8b, 0xce,            // MOV        RCX,RSI
             0xe8, _, _, _, _,            // CALL       set_placing_component
